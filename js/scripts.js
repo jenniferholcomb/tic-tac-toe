@@ -47,7 +47,7 @@ Player.prototype.markSquare = function (square){
 // if there is a value populating "square" it is true - it is filled
 // if there's no value, it's null - empty
 
-function newTurn(game.squares, playerId) {
+function newTurn(squares, playerId) {
   if (game.squares === null) // square is empty and can be populated
     if (player === 'x') {
       game.squares = 'x';
@@ -60,10 +60,7 @@ function newTurn(game.squares, playerId) {
     return 0;
   }
   return square 
-})
-
-winning.pattterg = [1,2,3]
-pattern2 = [1,5,9]
+}
 
 function checkBoard (player) {
   let winningArr = [[1, 2, 3],
@@ -75,11 +72,39 @@ function checkBoard (player) {
   [3, 6, 9],
   [3, 5, 7]];
   //check for winning patterns
-  if (game.players[marked].includes winningArr) {
-
+  if (game.players[marked].includes(winningArr)) {
+    //game.players wins
   }
+  let isWinningPattern = false;
+  winningArr.forEach(function (element){    
+    let ctr = 0; 
+    element.forEach( function (number)  {      
+      if(player.marked.includes(number))
+        ctr++;
+    });
+  });
 }
 
 // UI Logic
 
-// newTurn, player clicks square, assigns ID to square. so square is now true.
+function handleGameSetup() {
+  const sq1 = document.getElementById("1");
+  const sq2 = document.getElementById("2");
+  const sq3 = document.getElementById("3");
+  const sq4 = document.getElementById("4");
+  const sq5 = document.getElementById("5");
+  const sq6 = document.getElementById("6");
+  const sq7 = document.getElementById("7");
+  const sq8 = document.getElementById("8");
+  const sq9 = document.getElementById("9");
+}
+
+function handleBoardMark() {
+
+}
+
+
+
+window.addEventListener("load", function() {
+
+});
