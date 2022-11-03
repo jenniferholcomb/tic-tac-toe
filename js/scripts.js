@@ -72,18 +72,26 @@ function checkBoard (player) {
   [3, 6, 9],
   [3, 5, 7]];
   //check for winning patterns
-  if (game.players[marked].includes(winningArr)) {
-    //game.players wins
-  }
+  
   let isWinningPattern = false;
-  winningArr.forEach(function (element){    
-    let ctr = 0; 
-    element.forEach( function (number)  {      
+  let ctr = 0; 
+  winningArr.forEach(function (element){  
+    if (ctr != 3) {
+      console.log("Checking for pattern:" + element); 
+      ctr = 0;
+      element.forEach( function (number)  {      
       if(player.marked.includes(number))
         ctr++;
-    });
+    }); 
+  }
+      else {
+        isWinningPattern = true; 
+        console.log("You Win");
+        return "You won!";
+      }        
   });
 }
+
 
 // UI Logic
 
