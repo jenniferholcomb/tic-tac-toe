@@ -24,11 +24,11 @@ A program that plays tic-tac-toe
 ##Tests
 
 ''' 
-Describe: emptyString(input)
+Describe: Board()
 
-Test: "It should return 0 for an empty string."
-Code: isEmpty('');
-Expected Output: 0
+Test: It will create a 3x3 board.
+Code: let board = Board();
+Expected Output: Board object
 
 
 
