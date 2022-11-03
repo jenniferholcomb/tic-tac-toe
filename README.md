@@ -26,10 +26,9 @@ A program that plays tic-tac-toe
 ''' 
 Describe: Board()
 
-Test: It will create a 3x3 board.
+Test: It will create a 3x3 board object.
 Code: let board = Board();
 Expected Output: Board object
-
 
 
 '''
